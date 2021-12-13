@@ -7,5 +7,110 @@
     <link rel="stylesheet" href="/public/css/style.css" />
     <title>ohmyfood</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header header--menu">
+      <img
+        class="logo"
+        src="images/logo/ohmyfood.png"
+        alt="Le logo du site oh-my-food"
+      />
+    </header>
+    <main>
+      <div class="location">
+        <div icon>
+          <i class="fas fa-map-marker-alt"></i>
+          <p class="location__text">Paris, Belleville</p>
+        </div>
+      </div>
+      <section class="reservation">
+        <h1 class="reservation__header">Réservez le menu qui vous convient</h1>
+        <div class="text"></div>
+        <div class="button">
+          <button>Explorer nos restaurants</button>
+        </div>
+      </section>
+      <section class="fonctionement">
+        <div class="fonctionement__choix">
+          <div class="choix__num">1</div>
+          <div class="choix__icon">
+            <i class="fas fa-mobile-android-alt"></i>
+          </div>
+          <div class="choix__text"><p>Choisissez un restaurant</p></div>
+        </div>
+        <div class="fonctionement__compo">
+          <div class="compo__num">2</div>
+          <div class="compo__icon">
+            <i class="fal fa-ellipsis-v"></i><i class="fas fa-bars"></i>
+          </div>
+          <div class="compo__text"><p>Composez votre menu</p></div>
+        </div>
+        <div class="fonctionement__degustation">
+          <div class="degustation__num">3</div>
+          <div class="degustation__icon">
+            <i class="fas fa-mobile-android-alt"></i>
+          </div>
+          <div class="degustation__text"><p>Dégustez au restaurant</p></div>
+        </div>
+      </section>
+      <section class="restaurant">
+        <h1 class="restaurant__header">Restaurants</h1>
+        <nav>
+          <card class="restaurant restaurant--new">
+            <div class="restaurant__img">
+              <img
+                src="images/restaurants/La-palettes-du-gout.jpg"
+                alt="Une table au restaurant la palette du goût"
+              />
+              <p class="new">Nouveau</p>
+            </div>
+            <div class="restaurant__title">
+              <h1>La palette du goût</h1>
+              <p class="restaurant__location">Ménilmontant</p>
+              <div class="restaurant__icon"><i class="far fa-heart"></i></div>
+            </div>
+          </card>
+          <card class="restaurant restaurant--new">
+            <div class="restaurant__img">
+              <img
+                src="images/restaurants/La-note-enchantée.jpg"
+                alt="Une table au restaurant la note anchantée"
+              />
+              <p class="new">Nouveau</p>
+            </div>
+            <div class="restaurant__title">
+              <h1>La note enchantée</h1>
+              <p class="restaurant__location">Charonne</p>
+              <div class="restaurant__icon"><i class="far fa-heart"></i></div>
+            </div>
+          </card>
+          <card class="restaurant">
+            <div class="restaurant__img">
+              <img
+                src="images/restaurants/A-la-francaise.jpg"
+                alt="Une table au restaurant a la française"
+              />
+            </div>
+            <div class="restaurant__title">
+              <h1>À la française</h1>
+              <p class="restaurant__location">Cité Rouge</p>
+              <div class="restaurant__icon"><i class="far fa-heart"></i></div>
+            </div>
+          </card>
+          <card class="restaurant">
+            <div class="restaurant__img">
+              <img
+                src="images/restaurants/Le-délice-des-sens.jpg"
+                alt="Une table au restaurant le délice des sens"
+              />
+            </div>
+            <div class="restaurant__title">
+              <h1>Les délices des sens</h1>
+              <p class="restaurant__location">Folie-Mericourt</p>
+              <div class="restaurant__icon"><i class="far fa-heart"></i></div>
+            </div>
+          </card>
+        </nav>
+      </section>
+    </main>
+  </body>
 </html>
