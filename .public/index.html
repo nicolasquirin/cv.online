@@ -4,61 +4,67 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/.public/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/6dd7ccfc27.js"
+      crossorigin="anonymous"
+    ></script>
     <title>ohmyfood</title>
   </head>
   <body>
     <header class="header header--menu">
+      <i class="fas fa-long-arrow-left"></i>
       <img
-        class="logo"
-        src="images/logo/ohmyfood.png"
+        class="header__logo"
+        src="./img/logo/ohmyfood.png"
         alt="Le logo du site oh-my-food"
       />
     </header>
     <main>
       <div class="location">
-        <div icon>
+        <button class="location__button" onclick="getlocation()">
           <i class="fas fa-map-marker-alt"></i>
-          <p class="location__text">Paris, Belleville</p>
-        </div>
+          <span class="location__button__text"> Paris, Belleville</span>
+        </button>
       </div>
       <section class="reservation">
         <h1 class="reservation__header">Réservez le menu qui vous convient</h1>
-        <div class="text"></div>
-        <div class="button">
+        <div class="reservation__text">
+          Découvrez des restaurant d'exeption, séléctionnées par nos soins
+        </div>
+        <div class="reservation__button">
           <button>Explorer nos restaurants</button>
         </div>
       </section>
-      <section class="fonctionement">
-        <div class="fonctionement__choix">
-          <div class="choix__num">1</div>
-          <div class="choix__icon">
-            <i class="fas fa-mobile-android-alt"></i>
-          </div>
-          <div class="choix__text"><p>Choisissez un restaurant</p></div>
+      <section class="fonctionnement">
+        <h1 class="fonctionnement__header">Fonctionnement</h1>
+        <div class="fonctionnement__button">
+          <span class="number">1</span>
+          <button class="button-f">
+            <i class="fas fa-mobile-alt"></i>Choisissez un restaurant
+          </button>
         </div>
-        <div class="fonctionement__compo">
-          <div class="compo__num">2</div>
-          <div class="compo__icon">
-            <i class="fal fa-ellipsis-v"></i><i class="fas fa-bars"></i>
-          </div>
-          <div class="compo__text"><p>Composez votre menu</p></div>
+        <div class="fonctionnement__button">
+          <span class="number">2</span>
+          <button class="button-f">
+            <i class="fas fa-ellipsis-v"></i><i class="fas fa-bars"></i>Composez
+            votre menu
+          </button>
         </div>
-        <div class="fonctionement__degustation">
-          <div class="degustation__num">3</div>
-          <div class="degustation__icon">
-            <i class="fas fa-mobile-android-alt"></i>
-          </div>
-          <div class="degustation__text"><p>Dégustez au restaurant</p></div>
+        <div class="fonctionnement__button">
+          <span class="number">3</span>
+          <button class="button-f">
+            <i class="fal fa-ellipsis-v"></i>Dégustez au restaurant
+          </button>
         </div>
       </section>
       <section class="restaurant">
         <h1 class="restaurant__header">Restaurants</h1>
         <nav>
-          <card class="restaurant restaurant--new">
+          <card class="restaurant__card restaurant__card--new">
             <div class="restaurant__img">
               <img
-                src="images/restaurants/La-palettes-du-gout.jpg"
+                src="img/restaurants/La-palettes-du-gout.jpg"
                 alt="Une table au restaurant la palette du goût"
               />
               <p class="new">Nouveau</p>
@@ -69,7 +75,7 @@
               <div class="restaurant__icon"><i class="far fa-heart"></i></div>
             </div>
           </card>
-          <card class="restaurant restaurant--new">
+          <card class="restaurant__card restaurant__card--new">
             <div class="restaurant__img">
               <img
                 src="images/restaurants/La-note-enchantée.jpg"
@@ -83,7 +89,7 @@
               <div class="restaurant__icon"><i class="far fa-heart"></i></div>
             </div>
           </card>
-          <card class="restaurant">
+          <card class="restaurant__card">
             <div class="restaurant__img">
               <img
                 src="images/restaurants/A-la-francaise.jpg"
@@ -96,7 +102,7 @@
               <div class="restaurant__icon"><i class="far fa-heart"></i></div>
             </div>
           </card>
-          <card class="restaurant">
+          <card class="restaurant__card">
             <div class="restaurant__img">
               <img
                 src="images/restaurants/Le-délice-des-sens.jpg"

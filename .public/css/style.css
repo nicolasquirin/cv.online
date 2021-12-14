@@ -1,17 +1,127 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @import "scss/fontawesome.scss";
- *   |         ^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   sass\main.scss 1:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import \"scss/fontawesome.scss\";\d\a   \2502          ^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass\\main.scss 1:9  root stylesheet";
+body {
+  width: 100%;
+  height: auto;
 }
+
+.header {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__logo {
+  width: 50%;
+  height: 50%;
+}
+
+.location {
+  width: 100%;
+  height: 50px;
+}
+.location__button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-top: 3px solid #d3d1d1;
+}
+.location__button__text {
+  margin-left: 15px;
+}
+
+.reservation {
+  width: 100%;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: rgba(243, 243, 243, 0.452);
+}
+.reservation__header {
+  width: 70%;
+  height: 30%;
+}
+.reservation .reservation__text {
+  width: 100%;
+  height: 30%;
+  color: #707070;
+}
+.reservation .reservation__button {
+  width: 100%;
+  height: 30%;
+}
+.reservation button {
+  background: #ff79da;
+  background: linear-gradient(178deg, #ff79da 0%, #9356dc 87%);
+  width: 217px;
+  height: 52px;
+  border: none;
+  border-radius: 50px 50px 50px 50px;
+  color: white;
+}
+
+.fonctionnement {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.fonctionnement__header {
+  width: 100%;
+  height: 10%;
+  margin-bottom: -25px;
+}
+.fonctionnement__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.button-f {
+  width: 90%;
+  height: 70px;
+  border-radius: 20px 20px 20px 20px;
+  border: none;
+}
+button.button-f > i {
+  font-size: large;
+  color: #e0dcdc;
+  padding-left: 2px;
+}
+
+.restaurant {
+  width: 100%;
+  height: 1160px;
+  background-color: #e0dcdc;
+}
+.restaurant__header {
+  color: rebeccapurple;
+}
+.restaurant__card {
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
+  width: 90%;
+  height: 30%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 25px 25px 25px 25px;
+}
+.restaurant__img {
+  display: contents;
+  width: 100%;
+  height: 60%;
+}
+.restaurant__title {
+  width: 100%;
+  height: 30%;
+}
+
+/*# sourceMappingURL=style.css.map */
