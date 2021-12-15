@@ -96,32 +96,39 @@ button.button-f > i {
   padding-left: 2px;
 }
 
-.restaurant {
+section.restaurant {
   width: 100%;
-  height: 1160px;
+  height: 1260px;
   background-color: #e0dcdc;
 }
-.restaurant__header {
-  color: rebeccapurple;
+section.restaurant h1.restaurant__header {
+  width: 100%;
+  height: 15px;
 }
-.restaurant__card {
+section.restaurant .card {
   display: flex;
   flex-direction: column;
   object-fit: cover;
-  width: 90%;
-  height: 30%;
+  width: 300px;
+  height: 300px;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 25px 25px 25px 25px;
 }
-.restaurant__img {
-  display: contents;
-  width: 50%;
-  height: 60%;
+section.restaurant .card a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
 }
-.restaurant__title {
+section.restaurant .card__img {
+  position: relative;
   width: 100%;
-  height: 30%;
+  height: 70%;
+}
+section.restaurant img {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */
