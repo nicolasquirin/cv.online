@@ -7,7 +7,6 @@ body {
   width: 100%;
   height: auto;
 }
-
 .header {
   width: 100%;
   height: 65px;
@@ -19,6 +18,8 @@ body {
     height: 50%;
   }
 }
+
+// GEOLOCATION //
 
 .location {
   width: 100%;
@@ -36,6 +37,8 @@ body {
     }
   }
 }
+
+// RESERVATION //
 
 .reservation {
   width: 100%;
@@ -76,6 +79,8 @@ body {
   }
 }
 
+// FONCTIONNEMENT //
+
 .fonctionnement {
   width: 100%;
   height: 400px;
@@ -104,30 +109,24 @@ button.button-f {
     padding-left: 2px;
   }
 }
-.restaurant {
+
+// RESTAURANT //
+
+section.restaurant {
   width: 100%;
-  height: 1160px;
+  height: 1260px;
   background-color: $color-gray;
-  &__header {
-    color: rebeccapurple;
-  }
-  &__card {
-    display: flex;
-    flex-direction: column;
-    object-fit: cover;
-    width: 90%;
-    height: 30%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 25px 25px 25px 25px;
-  }
-  &__img {
-    display: contents;
-    width: 100%;
-    height: 60%;
-  }
-  &__title {
-    width: 100%;
-    height: 30%;
-  }
+}
+h1.restaurant__header {
+  font-size: 55px;
+}
+.card {
+  display: none;
+  flex-direction: column;
+  object-fit: cover;
+  width: 300px;
+  height: 30%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 25px 25px 25px 25px;
 }

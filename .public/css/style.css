@@ -116,7 +116,7 @@ button.button-f > i {
 }
 .restaurant__img {
   display: contents;
-  width: 100%;
+  width: 50%;
   height: 60%;
 }
 .restaurant__title {
