@@ -5,7 +5,7 @@ body {
 
 .header {
   width: 100%;
-  height: 65px;
+  height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +34,7 @@ body {
 
 .reservation {
   width: 100%;
-  height: 290px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,21 +79,24 @@ body {
   margin-bottom: -25px;
 }
 .fonctionnement__button {
+  width: 95%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 button.button-f {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   width: 90%;
   height: 70px;
   border-radius: 20px 20px 20px 20px;
   border: none;
 }
 button.button-f > i {
-  font-size: large;
-  color: #e0dcdc;
-  padding-left: 2px;
+  font-size: medium;
+  color: #3d3c3c;
 }
 
 section.restaurant {
@@ -168,9 +171,25 @@ section.restaurant i {
   font-size: x-large;
 }
 
-.logo__footer img {
-  width: 30%;
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: #3d3c3c;
   color: white;
+  line-height: 5px;
+}
+footer .footer {
+  padding-top: 20px;
+  margin-left: 20px;
+  font-size: small;
+}
+footer .footer__logo img {
+  width: 25%;
+  filter: invert(100%);
+}
+footer .footer i {
+  margin-right: 10px;
+  font-size: x-small;
 }
 
 /*# sourceMappingURL=style.css.map */
