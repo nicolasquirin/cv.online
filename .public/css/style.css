@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 body {
   width: 100%;
   height: auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: black;
 }
 
 .header {
@@ -42,8 +46,11 @@ body {
   background-color: #f7f7f7;
 }
 .reservation__header {
-  width: 70%;
+  width: 60%;
   height: 20%;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
 }
 .reservation .reservation__text {
   width: 80%;
@@ -75,6 +82,9 @@ body {
 .fonctionnement__header {
   width: 100%;
   height: 10%;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
 }
 .fonctionnement__button {
   margin-left: 5%;
