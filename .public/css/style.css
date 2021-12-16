@@ -4,15 +4,15 @@ body {
 }
 
 .header {
-  width: 100%;
-  height: 45px;
+  width: auto;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .header__logo {
   width: 50%;
-  height: 50%;
+  height: 60%;
 }
 
 .location {
@@ -37,19 +37,17 @@ body {
   height: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
   text-align: center;
-  background-color: rgba(243, 243, 243, 0.452);
+  background-color: #f7f7f7;
 }
 .reservation__header {
   width: 70%;
-  height: 30%;
+  height: 20%;
 }
 .reservation .reservation__text {
-  width: 100%;
-  height: 30%;
+  width: 80%;
+  height: 25%;
   color: #707070;
 }
 .reservation .reservation__button {
@@ -68,42 +66,53 @@ body {
 
 .fonctionnement {
   width: 100%;
-  height: 400px;
+  height: 360px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin-bottom: 30px;
 }
 .fonctionnement__header {
   width: 100%;
   height: 10%;
-  margin-bottom: -25px;
 }
 .fonctionnement__button {
-  width: 95%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.fonctionnement .number {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 22px;
+  height: 20px;
+  background-color: #9356dc;
+  color: white;
+  border-radius: 50%;
+  margin-left: -15px;
 }
 
-button.button-f {
+form button.button-f {
+  width: 95%;
+  height: 65px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  width: 90%;
-  height: 70px;
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 25px;
   border: none;
+  overflow: visible;
+  background-color: #f7f7f7;
 }
-button.button-f > i {
+form button.button-f > i {
   font-size: medium;
-  color: #3d3c3c;
+  color: #858585;
+  margin: 20px;
 }
 
 section.restaurant {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #e0dcdc;
+  background-color: #f7f7f7;
 }
 section.restaurant h1.restaurant__header {
   width: 100%;
@@ -121,17 +130,16 @@ section.restaurant .card {
   background-color: white;
 }
 section.restaurant .card--new p.new {
-  color: black;
-  width: 90px;
-  height: 20px;
+  width: 80px;
+  height: 30px;
   border-radius: 2px 2px 2px 2px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  float: right;
-  bottom: 105%;
+  position: absolute;
+  right: 5%;
   margin-right: 15px;
+  color: #2c9c81;
   background-color: #99e2d0;
 }
 section.restaurant .card a {
@@ -169,12 +177,14 @@ section.restaurant .restaurant__icon {
 }
 section.restaurant i {
   font-size: x-large;
+  color: #858585;
+  margin-right: -25px;
 }
 
 footer {
   width: 100%;
   height: 150px;
-  background-color: #3d3c3c;
+  background-color: #4d4d4d;
   color: white;
   line-height: 5px;
 }
