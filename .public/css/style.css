@@ -19,6 +19,88 @@ body {
   height: 60%;
 }
 
+section.loading-spinner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 85%;
+  animation: loading 2s ease-in-out forwards 2s 1;
+}
+section.loading-spinner .element {
+  margin: auto;
+  top: 200px;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 15px solid transparent;
+}
+section.loading-spinner .element:after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 15px solid transparent;
+  border-top-color: #9356dc;
+  border-bottom-color: #ff79da;
+  border-radius: 50%;
+  animation: rotation-spinner 2s linear 1;
+}
+section.loading-spinner .element-2 {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  margin-left: 20px;
+  top: 90px;
+  border-radius: 50%;
+  border: 10px solid transparent;
+}
+section.loading-spinner .element-2:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 10px solid transparent;
+  border-left-color: #99e2d0;
+  border-right-color: #99e2d0;
+  border-radius: 50%;
+  animation: rotation-spinner-2 2s linear 1;
+}
+
+@keyframes rotation-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotation-spinner-2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0;
+  }
+  90% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+}
 .location {
   width: 100%;
   height: 50px;
@@ -83,6 +165,7 @@ body {
 .reservation button:hover {
   cursor: pointer;
   background-color: #f2eafb;
+  box-shadow: 0px 10px 10px 0px #c5c5c5;
 }
 
 .fonctionnement {
@@ -135,6 +218,7 @@ form button.button-f {
 form button.button-f:hover {
   cursor: pointer;
   background-color: #f2eafb;
+  box-shadow: 0px 10px 10px 0px #c5c5c5;
 }
 form button.button-f i {
   font-size: medium;
@@ -172,6 +256,7 @@ section.restaurant .card {
 section.restaurant .card:hover {
   cursor: pointer;
   background-color: #f2eafb;
+  box-shadow: 0px 10px 10px 0px #c5c5c5;
 }
 section.restaurant .card--new p.new {
   width: 80px;
@@ -229,13 +314,35 @@ section.restaurant i {
   color: #858585;
   margin-right: -25px;
 }
-section.restaurant i:hover {
-  font-weight: bold;
+section.restaurant i:active {
+  animation-name: heart-anim;
+  animation-duration: 200ms;
   color: #9356dc;
-  transform: scale(1);
-  transition: transform 1000ms;
+  animation-fill-mode: forwards;
 }
 
+@keyframes heart-anim {
+  0% {
+    transform: scale(0);
+    font-weight: bold;
+  }
+  25% {
+    transform: scale(0.45);
+    font-weight: bold;
+  }
+  50% {
+    transform: scale(0.65);
+    font-weight: bold;
+  }
+  75% {
+    transform: scale(0.85);
+    font-weight: bold;
+  }
+  100% {
+    transform: scale(1);
+    font-weight: bold;
+  }
+}
 footer {
   width: 100%;
   height: 150px;
@@ -255,6 +362,11 @@ footer .footer__logo img {
 footer .footer i {
   margin-right: 10px;
   font-size: x-small;
+}
+footer .footer a {
+  text-decoration: none;
+  color: white;
+  line-height: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
