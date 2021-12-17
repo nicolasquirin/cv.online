@@ -31,9 +31,15 @@ body {
   align-items: center;
   border: none;
   border-top: 3px solid #d3d1d1;
+  font-size: medium;
+  color: #4d4d4d;
 }
 .location__button__text {
   margin-left: 15px;
+  font-weight: bold;
+}
+.location__button i {
+  height: 50%;
 }
 
 .reservation {
@@ -49,13 +55,16 @@ body {
   width: 60%;
   height: 20%;
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
   font-weight: bold;
+  color: black;
+  font-size: 22px;
 }
 .reservation .reservation__text {
-  width: 80%;
+  width: 100%;
   height: 25%;
-  color: #707070;
+  color: gray;
+  font-size: larger;
+  font-weight: normal;
 }
 .reservation .reservation__button {
   width: 100%;
@@ -69,6 +78,11 @@ body {
   border: none;
   border-radius: 50px 50px 50px 50px;
   color: white;
+  box-shadow: 0px 6px 15px 0px #d2d2d2;
+}
+.reservation button:hover {
+  cursor: pointer;
+  background-color: #f2eafb;
 }
 
 .fonctionnement {
@@ -81,7 +95,8 @@ body {
 }
 .fonctionnement__header {
   width: 100%;
-  height: 10%;
+  height: 5%;
+  margin-left: 5%;
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -94,12 +109,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 22px;
-  height: 20px;
+  width: 25px;
+  height: 26px;
   background-color: #9356dc;
   color: white;
   border-radius: 50%;
   margin-left: -15px;
+  font-size: small;
+  font-weight: normal;
 }
 
 form button.button-f {
@@ -111,11 +128,21 @@ form button.button-f {
   border: none;
   overflow: visible;
   background-color: #f7f7f7;
+  font-weight: bold;
+  font-size: medium;
+  box-shadow: 0px 6px 15px 0px #d2d2d2;
 }
-form button.button-f > i {
+form button.button-f:hover {
+  cursor: pointer;
+  background-color: #f2eafb;
+}
+form button.button-f i {
   font-size: medium;
   color: #858585;
   margin: 20px;
+}
+form button.button-f i:hover {
+  color: #9356dc;
 }
 
 section.restaurant {
@@ -124,9 +151,11 @@ section.restaurant {
   width: 100%;
   background-color: #f7f7f7;
 }
-section.restaurant h1.restaurant__header {
+section.restaurant h2.restaurant__header {
   width: 100%;
   height: 15px;
+  margin-left: 5%;
+  font-size: x-large;
 }
 section.restaurant .card {
   display: flex;
@@ -138,6 +167,11 @@ section.restaurant .card {
   border-radius: 15px 15px 15px 15px;
   margin: 5%;
   background-color: white;
+  box-shadow: 0px 6px 15px 0px #d2d2d2;
+}
+section.restaurant .card:hover {
+  cursor: pointer;
+  background-color: #f2eafb;
 }
 section.restaurant .card--new p.new {
   width: 80px;
@@ -147,10 +181,13 @@ section.restaurant .card--new p.new {
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 5%;
-  margin-right: 15px;
+  margin-right: 5%;
   color: #2c9c81;
   background-color: #99e2d0;
+}
+section.restaurant .card .container__new {
+  display: flex;
+  flex-direction: row-reverse;
 }
 section.restaurant .card a {
   display: contents;
@@ -178,6 +215,8 @@ section.restaurant .restaurant__text {
 section.restaurant .restaurant__location {
   width: 65%;
   margin-top: -15px;
+  font-weight: normal;
+  color: #4d4d4d;
 }
 section.restaurant .restaurant__icon {
   width: 35%;
@@ -189,6 +228,12 @@ section.restaurant i {
   font-size: x-large;
   color: #858585;
   margin-right: -25px;
+}
+section.restaurant i:hover {
+  font-weight: bold;
+  color: #9356dc;
+  transform: scale(1);
+  transition: transform 1000ms;
 }
 
 footer {
@@ -205,7 +250,7 @@ footer .footer {
 }
 footer .footer__logo img {
   width: 25%;
-  filter: invert(100%);
+  filter: invert(110%);
 }
 footer .footer i {
   margin-right: 10px;
