@@ -33,19 +33,44 @@ $base-size: 16 normal;
 }
 
 body {
-  width: 100%;
   height: auto;
   @include font-text;
 }
+
+//-- HEADER--//
+
 .header {
-  width: auto;
+  width: 100%;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  &--menu {
+    width: 100%;
+    position: relative;
+  }
   &__logo {
-    width: 50%;
+    width: 150px;
     height: 60%;
+  }
+  .container__icon {
+    width: 50px;
+    height: 25px;
+  }
+}
+
+// MENU__1 //
+
+section.menu1 {
+  width: 100%;
+  height: auto;
+}
+.container__img {
+  width: 100%;
+  height: 100%;
+  img {
+    max-width: 100%;
+    max-height: 400px;
   }
 }
 
@@ -224,7 +249,6 @@ section.loading-spinner {
   }
   &__button {
     margin-left: 5%;
-    margin-right: 5%;
   }
   .number {
     display: flex;
@@ -325,29 +349,29 @@ section.restaurant {
     height: 100%;
     border-radius: 15px 15px 0px 0px;
   }
-  .restaurant__text {
+  .restaurant__container {
     display: flex;
     width: 100%;
     height: 40%;
     margin-top: -10px;
     margin-left: 15px;
   }
+  .restaurant__text {
+    width: 80%;
+  }
   .restaurant__location {
-    width: 65%;
     margin-top: -15px;
     font-weight: normal;
     color: lighten($color: black, $amount: 30%);
   }
   .restaurant__icon {
-    width: 35%;
+    width: 20%;
     display: flex;
     align-items: center;
-    justify-content: end;
   }
   i {
     font-size: x-large;
     color: $color-icon;
-    margin-right: -25px;
     &:active {
       animation-name: heart-anim;
       animation-duration: 200ms;
