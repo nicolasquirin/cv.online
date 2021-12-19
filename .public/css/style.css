@@ -34,26 +34,51 @@ section.menu1 {
 .container__img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  overflow: hidden;
 }
 .container__img img {
-  max-width: 100%;
-  max-height: 400px;
+  position: relative;
+  width: 100%;
+  height: 200px;
 }
 
 .container__text {
+  position: relative;
   width: 100%;
   height: auto;
   border-top-right-radius: 40px;
   border-top-left-radius: 40px;
   background-color: #f2f2f2;
+  margin-top: -45px;
 }
 .container__text .container__header {
-  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+  height: 40px;
+  margin-bottom: 25px;
+  padding-top: 25px;
+  font-family: "Shrikhand", cursive;
+  font-size: small;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+.container__text i {
+  font-size: xx-large;
+  font-weight: lighter !important;
+  color: #858585;
 }
 .container__text > p {
+  width: 50px;
+  height: 25px;
   color: #858585;
   font-weight: normal;
   font-size: large;
+  margin-left: 5%;
+  border-bottom: 3px solid #99e2d0;
+  margin-bottom: 5px;
 }
 
 .container__button {
@@ -62,39 +87,117 @@ section.menu1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  animation-name: menu-anim;
+  animation-duration: 2s;
 }
-.container__button form {
-  color: #9356dc;
-}
-.container__button button {
+
+button.button-m {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
   justify-content: space-between;
-  width: 90%;
+  width: 95%;
   height: 60px;
   background-color: white;
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
   border: none;
   border-radius: 15px;
+  padding: 0;
+  overflow: hidden;
 }
-.container__button h2 {
-  margin: 0;
+button.button-m icon-menu:hover {
+  animation: icon-anim 1s;
+  cursor: pointer;
+}
+
+.button-text {
   width: 70%;
-  height: 50%;
-  font-size: medium;
+  height: 100%;
+  margin-left: 10px;
 }
-.container__button p {
-  width: 70%;
+.button-text h2 {
+  display: flex;
+  width: 100%;
   height: 50%;
-  color: #858585;
+  font-size: large;
+  margin: 0;
+  margin-top: 10px;
+}
+.button-text p {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  color: #393939;
+  font-size: 14px;
   margin: 0;
 }
-.container__button span {
+
+.price-menu {
+  display: flex;
+  align-items: flex-end;
+  width: 15%;
+  height: 80%;
   font-weight: bolder;
+  text-overflow: ellipsis;
+}
+
+.icon-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  height: 100%;
+  float: right;
+  font-size: xx-large;
+  color: white;
+  font-weight: lighter;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #99e2d0;
+  margin-right: -15%;
+}
+
+@keyframes icon-anim {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes menu-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+form.button__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+}
+form.button__menu > button {
+  background: #ff79da;
+  background: linear-gradient(178deg, #ff79da 0%, #9356dc 87%);
+  width: 217px;
+  height: 52px;
+  border: none;
+  border-radius: 50px 50px 50px 50px;
+  color: white;
+  box-shadow: 0px 6px 15px 0px #d2d2d2;
+}
+form.button__menu :hover {
+  cursor: pointer;
+  background-color: #f2eafb;
+  box-shadow: 0px 10px 10px 0px #c5c5c5;
+  filter: sepia(20%);
 }
 
 section.loading-spinner {
@@ -244,6 +347,7 @@ section.loading-spinner .element-2:after {
   cursor: pointer;
   background-color: #f2eafb;
   box-shadow: 0px 10px 10px 0px #c5c5c5;
+  filter: sepia(20%);
 }
 
 .fonctionnement {
@@ -423,9 +527,10 @@ section.restaurant i:active {
 footer {
   width: 100%;
   height: 150px;
-  background-color: #4d4d4d;
+  background-color: #333333;
   color: white;
   line-height: 5px;
+  font-weight: normal;
 }
 footer .footer {
   padding-top: 20px;
@@ -434,7 +539,7 @@ footer .footer {
 }
 footer .footer__logo img {
   width: 25%;
-  filter: invert(110%);
+  filter: invert(100%);
 }
 footer .footer i {
   margin-right: 10px;
