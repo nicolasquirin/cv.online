@@ -195,79 +195,114 @@ button.button-m {
   margin-right: 2.5%;
   border: none;
   border-radius: 15px;
-  padding: 0;
   overflow: hidden;
-  icon-menu:hover {
-    animation: icon-anim 1s;
+  :hover {
     cursor: pointer;
   }
-}
-.button-text {
-  width: 70%;
-  height: 100%;
-  margin-left: 10px;
+  &:hover > .icon-price {
+    cursor: pointer;
+    animation: icon-slide 0.5s ease-out forwards;
+    i {
+      animation: icon-rot 0.6s ease-in-out both;
+    }
+  }
 
-  h2 {
+  .button-text {
+    width: 70%;
+    height: 100%;
+    margin-left: 10px;
+
+    h2 {
+      display: flex;
+      width: 100%;
+      height: 50%;
+      font-size: large;
+      margin: 0;
+      margin-top: 10px;
+    }
+    p {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      height: 50%;
+      color: darken($color: $color-icon, $amount: 30%);
+      font-size: 14px;
+      margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .price {
     display: flex;
-    width: 100%;
-    height: 50%;
-    font-size: large;
-    margin: 0;
-    margin-top: 10px;
+    width: 10%;
+    height: 100%;
+    padding-right: 10px;
+    overflow: hidden;
+    right: 0px;
+    overflow: hidden;
+    span {
+      display: flex;
+      align-items: flex-end;
+      font-weight: lighter;
+      overflow: hidden;
+    }
   }
-  p {
+
+  .icon-price {
     display: flex;
-    width: 100%;
-    height: 50%;
-    color: darken($color: $color-icon, $amount: 30%);
-    font-size: 14px;
-    margin: 0;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 100%;
+    font-size: xx-large;
+    color: white;
+    font-weight: lighter;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: $color-tertiary;
+    margin-right: -12%;
+    border: none;
+    i {
+      color: white;
+    }
   }
-}
-.price-menu {
-  display: flex;
-  align-items: flex-end;
-  width: 15%;
-  height: 80%;
-  font-weight: bolder;
-  text-overflow: ellipsis;
-}
-.icon-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 15%;
-  height: 100%;
-  float: right;
-  font-size: xx-large;
-  color: white;
-  font-weight: lighter;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: $color-tertiary;
-  margin-right: -15%;
-}
 
-@keyframes icon-anim {
-  0% {
-    transform: translateX(0px);
+  @keyframes icon-rot {
+    0% {
+      transform: rotate(-180deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
   }
-  100% {
-    transform: translateX(-100%);
+
+  @keyframes icon-slide {
+    0% {
+      margin-left: 0%;
+      width: 0%;
+    }
+    100% {
+      margin-right: -2%;
+      width: 15%;
+    }
+    0% {
+      margin-right: 0%;
+      width: 0%;
+    }
+  }
+  @keyframes menu-anim {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
   }
 }
-
-@keyframes menu-anim {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-
 form.button__menu {
   display: flex;
   align-items: center;
