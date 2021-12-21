@@ -201,9 +201,9 @@ button.button-m {
   }
   &:hover > .icon-price {
     cursor: pointer;
-    animation: icon-slide 0.5s ease-out forwards;
+    margin-right: -7px;
     i {
-      animation: icon-rot 0.6s ease-in-out both;
+      animation: icon-rot 0.4s ease-in-out both 0.1s;
     }
   }
 
@@ -239,14 +239,11 @@ button.button-m {
     width: 10%;
     height: 100%;
     padding-right: 10px;
-    overflow: hidden;
     right: 0px;
-    overflow: hidden;
     span {
       display: flex;
       align-items: flex-end;
       font-weight: lighter;
-      overflow: hidden;
     }
   }
 
@@ -264,6 +261,7 @@ button.button-m {
     background-color: $color-tertiary;
     margin-right: -12%;
     border: none;
+    transition: margin-right 0.6s;
     i {
       color: white;
     }
@@ -278,20 +276,6 @@ button.button-m {
     }
   }
 
-  @keyframes icon-slide {
-    0% {
-      margin-left: 0%;
-      width: 0%;
-    }
-    100% {
-      margin-right: -2%;
-      width: 15%;
-    }
-    0% {
-      margin-right: 0%;
-      width: 0%;
-    }
-  }
   @keyframes menu-anim {
     0% {
       opacity: 0;
