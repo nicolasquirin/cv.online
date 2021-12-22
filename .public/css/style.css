@@ -17,9 +17,19 @@ body {
   width: 100%;
   position: relative;
 }
+.header--menu span {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  left: -70px;
+}
+.header--menu span i {
+  font-size: x-large;
+  color: #525252;
+}
 .header__logo {
   width: 150px;
-  height: 60%;
+  height: 50%;
 }
 .header .container__icon {
   width: 50px;
@@ -66,9 +76,28 @@ section.menu1 {
   letter-spacing: 1px;
 }
 .container__text i {
-  font-size: xx-large;
-  font-weight: lighter !important;
+  font-size: x-large;
   color: #858585;
+}
+.container__text i:active {
+  animation-name: heart-anim;
+  animation-duration: 300ms;
+  background: linear-gradient(to bottom, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-fill-mode: forwards;
+}
+@keyframes heart-anim {
+  0% {
+    transform: scale(0);
+    font-weight: bold;
+  }
+  100% {
+    transform: scale(1);
+    font-weight: bold;
+  }
 }
 .container__text > p {
   width: 50px;
@@ -104,6 +133,8 @@ button.button-m {
   border: none;
   border-radius: 15px;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 button.button-m :hover {
   cursor: pointer;
@@ -113,12 +144,14 @@ button.button-m:hover > .icon-price {
   margin-right: -7px;
 }
 button.button-m:hover > .icon-price i {
-  animation: icon-rot 0.4s ease-in-out both 0.1s;
+  transform: rotate(0deg);
 }
 button.button-m .button-text {
-  width: 70%;
+  position: relative;
+  width: 80%;
   height: 100%;
   margin-left: 10px;
+  overflow: hidden;
 }
 button.button-m .button-text h2 {
   display: flex;
@@ -129,55 +162,53 @@ button.button-m .button-text h2 {
   margin-top: 10px;
 }
 button.button-m .button-text p {
-  display: flex;
-  justify-content: flex-start;
+  text-align: left;
   width: 100%;
   height: 50%;
-  color: #393939;
+  color: #525252;
   font-size: 14px;
   margin: 0;
+  margin-right: 20px;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
 }
 button.button-m .price {
   display: flex;
   width: 10%;
   height: 100%;
-  padding-right: 10px;
-  right: 0px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 button.button-m .price span {
   display: flex;
   align-items: flex-end;
-  font-weight: lighter;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 5px;
 }
 button.button-m .icon-price {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10%;
-  height: 100%;
+  width: 15%;
+  height: 102%;
   font-size: xx-large;
   color: white;
   font-weight: lighter;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #99e2d0;
-  margin-right: -12%;
+  margin-right: -17%;
+  margin-top: -1px;
   border: none;
-  transition: margin-right 0.6s;
+  transition: margin-right 0.5s;
 }
 button.button-m .icon-price i {
   color: white;
-}
-@keyframes icon-rot {
-  0% {
-    transform: rotate(-180deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
+  transform: rotate(-180deg);
+  transition: transform 0.5s ease-in-out;
 }
 @keyframes menu-anim {
   0% {
@@ -511,26 +542,18 @@ section.restaurant i {
 }
 section.restaurant i:active {
   animation-name: heart-anim;
-  animation-duration: 200ms;
-  color: #9356dc;
+  animation-duration: 300ms;
+  background: linear-gradient(to bottom, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   animation-fill-mode: forwards;
 }
 
 @keyframes heart-anim {
   0% {
     transform: scale(0);
-    font-weight: bold;
-  }
-  25% {
-    transform: scale(0.45);
-    font-weight: bold;
-  }
-  50% {
-    transform: scale(0.65);
-    font-weight: bold;
-  }
-  75% {
-    transform: scale(0.85);
     font-weight: bold;
   }
   100% {
@@ -540,7 +563,7 @@ section.restaurant i:active {
 }
 footer {
   width: 100%;
-  height: 150px;
+  height: 160px;
   background-color: #333333;
   color: white;
   line-height: 5px;
