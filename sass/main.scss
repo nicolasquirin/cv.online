@@ -95,7 +95,7 @@ body {
 //-- HEADER--//
 
 .header {
-  width: 100%;
+  width: 90%;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -320,7 +320,7 @@ section.loading-spinner {
   height: 100%;
   background-color: white;
   opacity: 85%;
-  animation: loading 2s ease-in-out forwards 2s 1;
+  animation: loading 1s ease-in-out forwards 1s 1;
   .element {
     margin: auto;
     top: 200px;
@@ -338,7 +338,7 @@ section.loading-spinner {
       border-top-color: $color-primary;
       border-bottom-color: $color-secondary;
       border-radius: 50%;
-      animation: rotation-spinner 2s linear 1;
+      animation: rotation-spinner 1.5s linear 1;
     }
   }
   .element-2 {
@@ -359,7 +359,7 @@ section.loading-spinner {
       border-left-color: $color-tertiary;
       border-right-color: $color-tertiary;
       border-radius: 50%;
-      animation: rotation-spinner-2 2s linear 1;
+      animation: rotation-spinner-2 1.5s linear 1;
     }
   }
 }
@@ -412,6 +412,9 @@ section.loading-spinner {
     border-top: 3px solid rgb(211, 209, 209);
     font-size: medium;
     color: lighten($color: black, $amount: 30%);
+    &:hover {
+      cursor: text;
+    }
     &__text {
       margin-left: 15px;
       font-weight: bold;
@@ -471,7 +474,7 @@ section.loading-spinner {
   margin-bottom: 30px;
 
   &__header {
-    width: 100%;
+    width: 95%;
     height: 5%;
     margin-left: 5%;
     @include font-title;
@@ -498,14 +501,14 @@ form button.button-f {
   @include box-shadow();
   &:hover {
     @include hover-button();
+    i {
+      color: $color-primary;
+    }
   }
   i {
     font-size: medium;
     color: $color-icon;
     margin: 20px;
-    &:hover {
-      color: $color-primary;
-    }
   }
 }
 
@@ -517,7 +520,7 @@ section.restaurant {
   width: 100%;
   background-color: darken($color: white, $amount: 3%);
   h2.restaurant__header {
-    width: 100%;
+    width: 95%;
     height: 15px;
     margin-left: 5%;
     font-size: x-large;
@@ -603,17 +606,19 @@ section.restaurant {
 // FOOTER //
 footer {
   width: 100%;
-  height: 160px;
+  height: 200px;
   background-color: darken($color: white, $amount: 80%);
   color: white;
   line-height: 5px;
   font-weight: normal;
   .footer {
+    height: auto;
     padding-top: 20px;
     margin-left: 20px;
     font-size: small;
     &__logo img {
-      width: 25%;
+      width: 20%;
+      max-height: 30px;
       filter: invert(100%);
     }
     i {
@@ -624,6 +629,84 @@ footer {
       text-decoration: none;
       color: white;
       line-height: 10px;
+    }
+  }
+}
+
+// MEDIA QUERY //
+
+// MAX-WIDTH 550px //
+
+@media (min-width: 550px) {
+  section.restaurant {
+    nav {
+      height: auto;
+      margin-left: 10%;
+      margin-right: 10%;
+      .card {
+        height: 10%;
+      }
+    }
+  }
+  section.menu_1 {
+    margin-left: 10%;
+    margin-right: 10%;
+    height: auto;
+    img {
+      width: 100%;
+      height: 115%;
+    }
+  }
+}
+
+// MAX-WIDTH 900px //
+
+@media (min-width: 990px) {
+  section.fonctionnement {
+    max-width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section.--grid {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    border-radius: 15px;
+    nav {
+      display: grid;
+      grid-template-columns: repeat(2, 2fr);
+      margin-left: 15%;
+
+      margin-bottom: 5%;
+      .card {
+        max-width: 400px;
+        height: 250px;
+      }
+      :hover i {
+        color: red;
+        @include heart();
+        @include heart-anim();
+      }
+    }
+  }
+  section.menu_1 {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 10%;
+    height: auto;
+    img {
+      width: 100%;
+      height: 115%;
+    }
+    &:hover {
+      cursor: pointer;
+      .container__header {
+        i {
+          @include heart();
+          @include heart-anim();
+        }
+      }
     }
   }
 }
