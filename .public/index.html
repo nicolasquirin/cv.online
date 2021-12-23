@@ -13,12 +13,6 @@
     <title>ohmyfood</title>
   </head>
   <body>
-    <section class="loading-spinner">
-      <div class="element">
-        <div class="element-2"></div>
-      </div>
-    </section>
-
     <!-- HEADER-->
 
     <header class="header header--menu">
@@ -32,6 +26,11 @@
     <!-- MAIN /  GEOLOCATION-->
 
     <main>
+      <div class="loading-spinner">
+        <div class="element">
+          <div class="element-2"></div>
+        </div>
+      </div>
       <div class="location">
         <button class="location__button" onclick="getlocation()">
           <i class="fas fa-map-marker-alt"></i>
@@ -41,7 +40,7 @@
 
       <!-- RESERVATION -->
 
-      <section class="reservation">
+      <div class="reservation">
         <p class="reservation__header">Réservez le menu qui vous convient</p>
         <div class="reservation__text">
           Découvrez des restaurant d'exception, séléctionnées par nos soins.
@@ -51,7 +50,7 @@
             <button>Explorer nos restaurants</button>
           </form>
         </div>
-      </section>
+      </div>
 
       <!-- FONCTIONNEMENT-->
 
@@ -181,7 +180,9 @@
           <p><i class="fas fa-utensils"></i>Proposer un restaurant</p>
           <p><i class="fas fa-hands-helping"></i>Devenir partenaire</p>
           <p>Mention légales</p>
-          <a href="mailto: ogmyfood@compte.fr"><p>Contact</p></a>
+          <a href="mailto:ogmyfood@compte.fr">
+            <p>Contact</p>
+          </a>
         </div>
       </div>
     </footer>

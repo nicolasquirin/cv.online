@@ -1,0 +1,90 @@
+// MAX-WIDTH 550px //
+
+@media (min-width: 550px) {
+  section.restaurant {
+    nav {
+      height: auto;
+      margin-left: 10%;
+      margin-right: 10%;
+      .card {
+        height: 10%;
+      }
+    }
+  }
+  section.menu_1 {
+    margin-left: 10%;
+    margin-right: 10%;
+    height: auto;
+    img {
+      width: 100%;
+      height: 115%;
+    }
+  }
+}
+
+// MAX-WIDTH 900px //
+
+@media (min-width: 990px) {
+  section.fonctionnement {
+    max-width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section.--grid {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    border-radius: 15px;
+    nav {
+      display: grid;
+      grid-template-columns: repeat(2, 2fr);
+      margin-left: 15%;
+
+      margin-bottom: 5%;
+      .card {
+        max-width: 100%;
+        height: 80%;
+      }
+      :hover i {
+        color: red;
+        @include heart();
+        @include heart-anim();
+      }
+    }
+  }
+  section.menu_1 {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 10%;
+    height: auto;
+    img {
+      width: 100%;
+      height: 115%;
+    }
+    &:hover {
+      cursor: pointer;
+      .container__header {
+        i {
+          @include heart();
+          @include heart-anim();
+        }
+      }
+    }
+  }
+  .footer {
+    .footer__logo {
+      text-align: center;
+    }
+    .text {
+      margin-left: 25%;
+      margin-top: 25px;
+      font-size: medium;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      i {
+        font-size: medium;
+      }
+    }
+  }
+}

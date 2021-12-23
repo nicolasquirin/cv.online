@@ -1,0 +1,29 @@
+.header {
+  width: 90%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &--menu {
+    width: 100%;
+    position: relative;
+    span {
+      position: relative;
+      width: 40px;
+      height: 20px;
+      left: -70px;
+      i {
+        font-size: x-large;
+        color: darken($color: $color-icon, $amount: 20%);
+      }
+    }
+  }
+  &__logo {
+    width: 150px;
+    height: 50%;
+  }
+  .container__icon {
+    width: 50px;
+    height: 25px;
+  }
+}

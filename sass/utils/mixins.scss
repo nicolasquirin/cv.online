@@ -1,0 +1,76 @@
+@mixin font-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@mixin font-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: black;
+}
+
+@mixin box-shadow {
+  box-shadow: 0px 6px 15px 0px lighten($color: $color-icon, $amount: 30%);
+}
+
+@mixin hover-button {
+  cursor: pointer;
+  background-color: lighten($color: $color-primary, $amount: 35%);
+  box-shadow: 0px 10px 10px 0px lighten($color: $color-icon, $amount: 25%);
+}
+
+@mixin icon-primary {
+  color: $color-primary;
+}
+
+@mixin Pink-button {
+  background: $color-secondary;
+  background: linear-gradient(178deg, $color-secondary 0%, $color-primary 87%);
+  width: 217px;
+  height: 52px;
+  border: none;
+  border-radius: 50px 50px 50px 50px;
+  color: white;
+}
+
+@mixin gray-button {
+  width: 95%;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  border: none;
+  overflow: visible;
+  background-color: darken($color: white, $amount: 3%);
+  font-weight: bold;
+  font-size: medium;
+}
+
+@mixin heart {
+  animation-name: heart-anim;
+  animation-duration: 300ms;
+  background: linear-gradient(
+    to bottom,
+    $color-primary 0%,
+    $color-secondary 100%
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-fill-mode: forwards;
+}
+
+@mixin heart-anim {
+  @keyframes heart-anim {
+    0% {
+      transform: scale(0);
+      font-weight: bold;
+    }
+    100% {
+      transform: scale(1);
+      font-weight: bold;
+    }
+  }
+}
