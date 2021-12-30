@@ -4,8 +4,8 @@
   "description": "OhMyFood Project n°3",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:.public/css/style.css --style compressed",
-    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style compressed",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -13,5 +13,9 @@
   },
   "author": "",
   "license": "ISC",
-  "browserslist": "last 4 versions"
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/nicolasquirin/QuirinNicolas_3_13122021/issues"
+  },
+  "homepage": "https://github.com/nicolasquirin/QuirinNicolas_3_13122021#readme"
 }
