@@ -22,8 +22,8 @@ html {
 
 body {
   margin: 0;
-  padding-right: 0px;
-  padding-left: 0px;
+  padding-right:30px;
+  padding-left: 30px;
 }
 
 /**
@@ -176,8 +176,7 @@ textarea {
  */
 
 button,
-input {
-  /* 1 */
+input { /* 1 */
   overflow: visible;
 }
 
@@ -187,8 +186,7 @@ input {
  */
 
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
