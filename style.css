@@ -441,13 +441,16 @@ button#On:hover {
   display: flex;
 }
 .projet:nth-child(2) {
-  margin-left: 3%;
+  margin-left: 7%;
 }
 .projet:nth-child(3) {
-  margin-left: 6%;
+  margin-left: 0%;
 }
 .projet:nth-child(4) {
-  margin-left: 9%;
+  margin-left: 7%;
+}
+.projet:nth-child(5) {
+  margin-left: 0%;
 }
 
 .cadre {
