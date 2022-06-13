@@ -550,6 +550,7 @@ button#On span:nth-child(4) {
 #portfolio h3 {
   font-size: 3em;
   padding-bottom: 15px;
+  text-shadow: 1px 1px 2px #0d73d1, 0 0 1em #9134b6, 0 0 0.2em #9134b6;
 }
 .projet {
   display: flex;
@@ -676,48 +677,40 @@ button#On span:nth-child(4) {
 /* OTHER SKILL */
 
 #other-skills {
-  margin-top: 80px;
-  padding: 50px 100px 100px 100px;
-  width: 100%;
-  background: linear-gradient(
-    19deg,
-    rgba(218, 221, 32, 0.103) 0%,
-    #3276ce5b 90%
-  );
-  clip-path: polygon(0 11%, 100% 0%, 100% 100%, 0 84%);
+  margin-top: 100px;
+  padding-left: 40px;
+  background-image: url(./media/competences2.jpg);
 }
 
 #other-skills h3 {
-  transform: rotate(-3.2deg);
+  margin-top: 150px;
   font-size: 3em;
   padding-top: 30px;
   text-shadow: -1px 1p 0px #979486;
   color: #0f2670;
+  text-shadow: 1px 1px 2px #0662ec, 0 0 1em #ffffff, 0 0 0.2em #fdfdfd;
 }
 .cloud {
+  font-family: "Audiowide", sans-serif;
   text-align: center;
   padding: 50px 0;
   font-size: 2em;
   text-transform: uppercase;
+  text-shadow: 1px 1px 2px #02a1fd, 0 0 1em #f9fdff, 0 0 0.2em #02d7f3;
 }
 
 /* HOBBIES */
 
 #hobbies {
-  padding: 250px 50px 100px 50px;
-  margin: -300px 0px -90px 0px;
-  clip-path: polygon(0 21%, 100% 31%, 100% 95%, 0% 100%);
-  background: linear-gradient(
-    19deg,
-    rgba(35, 154, 223, 0.69) 0%,
-    #eedd459d 80%
-  );
+  margin-top: 150px;
 }
 
 #hobbies h3 {
-  transform: rotate(3.2deg);
+  margin-bottom: 100px;
+  padding-left: 40px;
   font-size: 3em;
   text-shadow: -1px 1px 0px #1336a7;
+  text-shadow: 1px 1px 2px #02a1fd, 0 0 1em #f9fdff, 0 0 0.2em #02d7f3;
 }
 .pictures {
   display: flex;
@@ -741,6 +734,7 @@ button#On span:nth-child(4) {
 }
 .flip-box-front,
 .flip-box-back {
+  border-radius: 5%;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -748,6 +742,8 @@ button#On span:nth-child(4) {
 }
 
 .flip-box {
+  border-radius: 5%;
+  margin: 10px;
   overflow: hidden;
   background-color: transparent;
   width: 100%;
@@ -770,6 +766,7 @@ button#On span:nth-child(4) {
 /* FOOTER */
 
 footer {
+  margin-top: 150px;
   background: url(./media/fond1.jpg) 50% 0% no-repeat fixed;
   background-size: cover;
   text-align: center;
