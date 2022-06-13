@@ -223,7 +223,6 @@ header .cv-button:hover a {
   width: 950px;
   height: 550px;
   margin-top: 150px;
-  margin-left: 5%;
   background-repeat: no-repeat;
   position: absolute;
   animation-play-state: paused;
@@ -250,7 +249,7 @@ header .cv-button:hover a {
   z-index: 1;
   animation-name: message;
   animation-duration: 1.5s;
-  animation-delay: 1s;
+  animation-delay: 0s;
   animation-fill-mode: both;
   animation-direction: normal;
   animation-play-state: running;
@@ -380,23 +379,23 @@ button#On span:nth-child(4) {
   position: relative;
   top: 150px;
   float: right;
-  height: 550px;
-  width: 550px;
-  max-width: 550px;
+  height: 518px;
+  width: 396px;
+  max-width: 580px;
   margin-right: 10%;
   border-radius: 25px 25px 25px 25px;
-  background-color: rgb(190, 190, 190);
-  box-shadow: 0px 6px 20px 2px rgb(126, 125, 125);
+  background-image: url(./media/tablette2.png);
+  box-shadow: 10px -10px 30px 2px rgb(126, 125, 125);
 }
 #formation-container {
-  width: 80%;
-  height: 70%;
+  width: 75%;
+  height: 71%;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
   text-align: center;
   border-radius: 25px 25px 25px 25px;
-  background-color: rgb(163, 162, 162);
+  background-color: rgba(125, 179, 189, 0.753);
   border-radius: 25px;
   color: #fff;
   box-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 20px #0ba9ca, 0 0 30px #0ba9ca,
@@ -406,19 +405,21 @@ button#On span:nth-child(4) {
 }
 
 #autodidacte {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 #occ {
-  padding-top: 65px;
+  padding-top: 45px;
 }
 #formation h3 {
-  margin-top: 20px;
+  font-size: x-large;
+  margin-top: 60px;
   text-align: center;
   text-shadow: -1px -1px 3px #35b4d5;
 }
 
 #formation h4 {
+  font-size: larger;
   font-weight: bold;
   letter-spacing: 0.08em;
   padding-bottom: 10px;
@@ -433,11 +434,12 @@ button#On span:nth-child(4) {
 }
 
 .data {
+  font-size: smaller;
   flex: auto;
   width: 140px;
   text-align: center;
-  margin-left: 35px;
-  margin-right: 35px;
+  margin-left: 5%;
+  margin-right: 5%;
   border: 1px solid #ffffff;
   box-shadow: 0 0 8px #ffffff;
   border-radius: 15px 15px 15px 15px;
@@ -470,7 +472,7 @@ button#On span:nth-child(4) {
 #parcours {
   position: relative;
   max-width: 800px;
-  margin: 940px auto 180px auto;
+  margin: 850px auto 180px auto;
   padding: 40px 30px 100px 30px;
   background: url(./media/parcours.jpg) no-repeat fixed 50% 50%;
   background-size: cover;
@@ -633,12 +635,14 @@ button#On span:nth-child(4) {
   transition: 2s ease;
 }
 .legende a {
+  width: 95%;
   padding: 16px 10px 10px 10px;
   margin-top: 20px;
   font-size: 1.1em;
   float: right;
+  text-align: center;
   border-radius: 3px;
-  background: #e2dedb;
+  background: #9134b6;
   animation: flip2-2-hor-bottom-bck 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955)
     both;
 }
@@ -896,11 +900,11 @@ footer p {
     margin-right: auto;
   }
   #formation {
-    display: block;
-    width: 100%;
-    float: none;
-    margin-left: auto;
-    top: -50px;
+    margin-right: 10%;
+  }
+
+  #formation h3 {
+    font-size: large;
   }
   #langages {
     display: block;
@@ -908,12 +912,9 @@ footer p {
   header h2 {
     font-size: 2.1em;
   }
-  #parcours {
-    margin-top: 0px;
-  }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   h1 {
     padding-top: 30px;
     font-size: 2.7em;
@@ -923,15 +924,32 @@ footer p {
   typed {
     font-size: 0.9em;
   }
-
+  section#langage {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   #formation {
-    margin-right: 1%;
-    animation: none;
+    width: 397px;
+    margin-top: -100px;
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #formation-container {
+    margin-top: 30px;
+  }
+  #formation h3 {
+    padding-top: 65px;
   }
   .network {
     font-size: 2.5em;
     padding: 10px 20px;
     background: size 100%;
+  }
+  #parcours {
+    margin-top: 350px;
   }
 }
 
@@ -959,13 +977,10 @@ footer p {
     background-repeat: no-repeat;
     position: absolute;
   }
-  button#On {
-    position: relative;
-    margin-top: -150px;
-  }
   .message {
     position: relative;
-    margin-left: 55px;
+    margin-left: auto;
+    margin-right: auto;
     top: -15px;
     width: 450px;
     height: 450px;
@@ -980,19 +995,15 @@ footer p {
     font-size: 23px;
   }
   button#On {
-    position: relative;
-    width: 125px;
     top: -15px;
-    margin-left: 85px;
+    margin-left: 160px;
   }
   #formation {
-    width: 80%;
-    top: 500px;
+    width: 397px;
+    top: 650px;
     float: none;
     display: block;
     margin-bottom: 350px;
-    background: none;
-    clip-path: none;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1032,6 +1043,12 @@ footer p {
   header h2 {
     font-size: 1.6em;
   }
+  #portfolio h4 {
+    font-size: large;
+  }
+  #portfolio h5 {
+    font-size: medium;
+  }
 }
 @media screen and (max-width: 520px) {
   h1 {
@@ -1069,6 +1086,9 @@ footer p {
   }
   #formation {
     display: none;
+  }
+  #parcours {
+    margin-top: -150px;
   }
   #legende {
     font-size: small;
