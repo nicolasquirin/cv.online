@@ -29,7 +29,9 @@ const newUrlSearchParams = urlSearcheParams.get("id");
 // Fonction asynchrone de récupération du produit selectionner pas Id avec la méthode (Fetch + UrlSearchParams).
 //
 const fetchDatas = async () => {
-  await fetch(`http://evening-forest-19432.herokuapp.com/${newUrlSearchParams}`)
+  await fetch(
+    `https://openclassrooms-project-5.herokuapp.com/${newUrlSearchParams}`
+  )
     .then((res) => res.json())
     .then(
       (promise = (datas = promise) => {

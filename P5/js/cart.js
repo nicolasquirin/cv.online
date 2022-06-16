@@ -25,7 +25,7 @@ let datas = [];
 async function fetchDatas() {
   let items = document.getElementById("cart__items");
   for (let datas of productInStorage) {
-    await fetch(`http://evening-forest-19432.herokuapp.com/${datas.id}`)
+    await fetch(`https://openclassrooms-project-5.herokuapp.com/${datas.id}`)
       .then((res) => res.json())
       .then(
         (data) => (
@@ -308,7 +308,7 @@ function sendForm() {
     //
     async function clientData() {
       await fetch(
-        "http://evening-forest-19432.herokuapp.com/api/products/order",
+        "https://openclassrooms-project-5.herokuapp.com/api/products/order",
         {
           method: "POST",
           headers: {
