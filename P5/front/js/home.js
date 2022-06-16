@@ -2,9 +2,7 @@
 // Fonction de récupération asynchrone des ressources de l'API avec la methode (fetch).
 //
 const fetchDatas = async () => {
-  datas = await fetch(
-    "https://openclassrooms-project-5.herokuapp.com/api/products"
-  )
+  datas = await fetch("http://evening-forest-19432.herokuapp.com/api/products")
     .then((res) => res.json())
     .catch((error) => alert("connexion au serveur impossible  : " + error));
 
