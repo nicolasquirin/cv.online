@@ -25,7 +25,7 @@ let datas = [];
 async function fetchDatas() {
   let items = document.getElementById("cart__items");
   for (let datas of productInStorage) {
-    await fetch(`http://localhost:3000/${datas.id}`)
+    await fetch(`https://openclassrooms-project-5.herokuapp.com/${datas.id}`)
       .then((res) => res.json())
       .then(
         (data) => (
@@ -307,13 +307,16 @@ function sendForm() {
     // Fonction asynchrone qui envoie 'contact' et [products] par methode POST a l'API.
     //
     async function clientData() {
-      await fetch("http://localhost:3000/api/products/order", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ contact: contact, products: products }),
-      })
+      await fetch(
+        "https://openclassrooms-project-5.herokuapp.com/api/products/order",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ contact: contact, products: products }),
+        }
+      )
         //
         // Recupération de la réponse en JSON.
         //
