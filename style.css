@@ -467,6 +467,26 @@ button#On span:nth-child(4) {
   }
 }
 
+@keyframes kreep {
+    0% {-webkit-transform: scale(1.1,.9);
+        transform: scale(1.1,.9);}
+   50% { -webkit-transform: scale(.9,1.1) translateY(-.5rem)}
+   70% { -webkit-transform: scale(1);
+         transform: scale(1);}
+}
+
+.kreep {
+  width: 60px;
+  margin-top: 18px;
+  display: inline-block;
+  /*name-duration-function(ease,eas-in,linear)-delay-count-direction */
+  animation: kreep 0.7s ease 2s infinite alternate;
+}
+.kreep:hover {
+  animation: none;
+  cursor: pointer;
+}
+
 /* PARCOURS */
 
 #parcours {
