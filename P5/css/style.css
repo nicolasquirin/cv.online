@@ -127,7 +127,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.75s, visibility 0.75s;
+  transition: opacity 0.5s, visibility 0.5s;
 }
 
 .loader-hidden {
@@ -142,7 +142,7 @@ main {
   border: 15px solid #3498db;
   border-top-color: #ffffff;
   border-radius: 50%;
-  animation: loading 0.75s ease infinite;
+  animation: loading 0.9s ease infinite;
 }
 
 @keyframes loading {
