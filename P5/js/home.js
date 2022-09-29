@@ -2,6 +2,13 @@
 // Fonction de récupération asynchrone des ressources de l'API avec la methode (fetch).
 //
 const fetchDatas = async () => {
+  // Fonction spinner pour serveur trop lent comme heroku
+
+  window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+    loader.classList.add("loader-hidden");
+  });
+
   datas = await fetch(
     "https://openclassrooms-project-5.herokuapp.com/api/products"
   )
