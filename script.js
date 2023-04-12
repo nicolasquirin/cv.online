@@ -1,99 +1,75 @@
 //NAVBAR
 let lastScrollTop = 0;
-navbar = document.getElementById('navbar');
+navbar = document.getElementById("navbar");
 
-window.addEventListener('scroll', function() {
-    const scrollTop = window.pageTOffset ||
-    this.document.documentElement.scrollTop;
+window.addEventListener("scroll", function () {
+  const scrollTop =
+    window.pageTOffset || this.document.documentElement.scrollTop;
 
-    if (scrollTop > lastScrollTop) {
-         navbar.style.top="-50px";
-    } else {
-        navbar.style.top="0";
-    }
-    lastScrollTop = scrollTop;
+  if (scrollTop > lastScrollTop) {
+    navbar.style.top = "-50px";
+  } else {
+    navbar.style.top = "0";
+  }
+  lastScrollTop = scrollTop;
 });
-
-
-
-
-
-
-
 
 //TYPED
 
-
-var typed = new Typed('.typed', {
-    strings: ['Developpeur Web', 'Web Developer'],
-    typeSpeed: 50,
-    backSpeed: 20,
-    smartBackspace: true,
-  });
-
-
-
-
-
-
-
+var typed = new Typed(".typed", {
+  strings: ["Developpeur Web", "Web Developer"],
+  typeSpeed: 50,
+  backSpeed: 20,
+  smartBackspace: true,
+});
 
 //ORDIDYNA
 
+var ordi = document.querySelectorAll(".ordidyna");
+var mess = document.querySelectorAll(".message");
 
-  var ordi = document.querySelectorAll('.ordidyna');
-  var mess = document.querySelectorAll('.message');
-
-    document.getElementById('On').onclick = function () {
-        for (var i = 0; i < ordi.length; i++) {
-            if (ordi[i].style.animationPlayState == 'paused') {
-                ordi[i].style.animationPlayState = 'running';
-            }
-            else {
-                ordi[i].style.animationPlayState = 'running';
-                mess[i].style.display = 'block';
-            }
-        }
-}
-
-
-
-
-
-
-
-  // COMPTEUR 
-
-
-
-  let compteur = 0;
-
-  $(window).scroll(function() {
-
-    const top = $('.counter').offset().top - window.innerHeight;
-
-    if (compteur == 0 && $(window).scrollTop() > top) {
-      $('.counter-value').each(function() {
-          let $this = $(this),
-          countTo = $this.attr('data-count');
-          $({
-              countNum: $this.text()
-          }).animate({
-              countNum : countTo
-          },
-          {
-              duration: 10000,
-              easing: 'swing',
-              step: function() {
-                  $this.text(Math.floor(this.countNum));
-              },
-              complete: function() {
-                  $this.text(this.countNum);
-              }
-          });
-      });
-      compteur = 1;
+document.getElementById("On").onclick = function () {
+  for (var i = 0; i < ordi.length; i++) {
+    if (ordi[i].style.animationPlayState == "paused") {
+      ordi[i].style.animationPlayState = "running";
+    } else {
+      ordi[i].style.animationPlayState = "running";
+      mess[i].style.display = "block";
     }
+  }
+};
+
+// COMPTEUR
+
+let compteur = 0;
+
+$(window).scroll(function () {
+  const top = $(".counter").offset().top - window.innerHeight;
+
+  if (compteur == 0 && $(window).scrollTop() > top) {
+    $(".counter-value").each(function () {
+      let $this = $(this),
+        countTo = $this.attr("data-count");
+      $({
+        countNum: $this.text(),
+      }).animate(
+        {
+          countNum: countTo,
+        },
+        {
+          duration: 10000,
+          easing: "swing",
+          step: function () {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function () {
+            $this.text(this.countNum);
+          },
+        }
+      );
+    });
+    compteur = 1;
+  }
 });
 
 //AOS
@@ -101,8 +77,18 @@ var typed = new Typed('.typed', {
 AOS.init();
 
 AOS.init({
-    disable: function() {
-      var maxWidth = 1500;
-      return window.innerWidth < maxWidth;
-    }
-  });
+  disable: function () {
+    var maxWidth = 1500;
+    return window.innerWidth < maxWidth;
+  },
+});
+
+// AGE
+let AGE = document.getElementById("AGE");
+
+function getAge(date) {
+  var diff = Date.now() - date.getTime();
+  var age = new Date(diff);
+  return Math.abs(age.getUTCFullYear() - 1970);
+}
+AGE.textContent = getAge(new Date(1989, 03, 0)); //Date(année, mois, jour)
