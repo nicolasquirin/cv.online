@@ -17,7 +17,7 @@ window.addEventListener("scroll", function () {
 //TYPED
 
 var typed = new Typed(".typed", {
-  strings: ["Developpeur Web", "Web Developer"],
+  strings: ["CONSULTANT SENIOR SERVICENOW", "SENIOR CONSULTANT SERVICENOW"],
   typeSpeed: 50,
   backSpeed: 20,
   smartBackspace: true,
