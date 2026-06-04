@@ -1266,7 +1266,8 @@ footer p {
 }
 
 .snow-metrics {
-  margin-top: 60px;
+  margin-top: 160px;
+  margin-bottom: 100px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -1297,4 +1298,110 @@ footer p {
 .metric small {
   color: rgb(44, 42, 42);
   font-size: 1rem;
+}
+.snow-metrics {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.metric-dashboard {
+    width: 600px;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(129,181,62,.3);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: .4s;
+    backdrop-filter: blur(8px);
+}
+
+.metric-dashboard:hover {
+    transform: translateY(-10px);
+    box-shadow:
+        0 0 30px rgba(129,181,62,.25);
+}
+
+.metric-dashboard h4 {
+    background: #81B53E;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin: 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.dashboard-preview {
+    height: 180px;
+    overflow: hidden;
+}
+
+.dashboard-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.metric-dashboard:hover img {
+    transform: scale(1.08);
+}
+
+.metric-dashboard span {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #81B53E;
+}
+
+.metric-dashboard small {
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+    color: #81B53E;
+    font-size: 1rem;
+}
+.dashboard-preview img {
+  cursor: zoom-in;
+  transition: 0.2s ease;
+}
+
+.dashboard-preview img:hover {
+  transform: scale(1.03);
+}
+.metric {
+  position: relative;
+}
+
+.metric::after {
+  content: "⭐";
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 14px;
+  color: gold;
+  opacity: 0.9;
+  pointer-events: none;
+  
+}
+.snow-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+.snow-metrics h3 {
+  width: 100%;
+  flex-basis: 100%;
+  display: block;
+  text-align: center;
+  margin: 0 0 30px 0;
+  margin-top: 60px;
+  margin-bottom: 30px;
 }
